@@ -50,6 +50,10 @@ Desktop posts to `http://127.0.0.1:<port>/v1/incoming` with bearer auth. Three e
 
 The adapter POSTs the agent's reply to `<callback.url>/tasks/<task_id>` on the desktop side, where `callback.url` is a loopback base URL the desktop included on the inbound event.
 
+### X/Twitter follow-up source
+
+For post-call social follow-up, live event monitoring, or audience research on X/Twitter, pair StageWhisper with [Hermes Tweet](https://github.com/Xquik-dev/hermes-tweet) instead of adding a one-off social tool. Use `tweet_explore` for planning, require `XQUIK_API_KEY` for `tweet_read`, and keep `tweet_action` disabled unless the user explicitly sets `HERMES_TWEET_ENABLE_ACTIONS=true`.
+
 ### Local development
 
 ```bash
