@@ -1,0 +1,31 @@
+name: stagewhisper
+label: StageWhisper
+kind: platform
+version: 0.42.0
+description: >
+  Bridges the StageWhisper desktop app to your Hermes Agent. Streams live-call
+  transcripts (as coaching prompts) and in-call chat to the agent; pipes the
+  agent's reply back into the desktop call panel.
+author: StageWhisper
+requires_env:
+  - name: STAGEWHISPER_RELAY_TOKEN
+    description: "Bearer token shared with the StageWhisper desktop app for inbound traffic."
+    prompt: "StageWhisper relay token (32+ chars)"
+    password: true
+  - name: STAGEWHISPER_LISTEN_PORT
+    description: "TCP port the adapter binds on 127.0.0.1 for desktop to agent traffic."
+    prompt: "Listen port (1024-65535)"
+    password: false
+optional_env:
+  - name: STAGEWHISPER_LISTEN_HOST
+    description: "Loopback interface to bind (default 127.0.0.1). Must be loopback."
+  - name: STAGEWHISPER_ALLOWED_USERS
+    description: "Comma-separated session_id allowlist. Empty = allow any."
+  - name: STAGEWHISPER_ALLOW_ALL_USERS
+    description: "1 to bypass allowlist entirely."
+  - name: STAGEWHISPER_MAX_CONCURRENT
+    description: "Max in-flight tasks (default 4)."
+  - name: STAGEWHISPER_CALLBACK_TIMEOUT_S
+    description: "Callback HTTP timeout in seconds (default 10)."
+  - name: STAGEWHISPER_DEDUP_CACHE_SIZE
+    description: "Idempotency LRU size (default 2048)."
