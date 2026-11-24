@@ -1,0 +1,8 @@
+data: {"id":"chatcmpl-host-2","object":"chat.completion.chunk","created":1791700000,"model":"deepseek-chat","choices":[{"index":0,"delta":{"role":"assistant","content":"Let me look through your calls."},"finish_reason":null}]}
+
+data: {"id":"chatcmpl-host-2","object":"chat.completion.chunk","created":1791700000,"model":"deepseek-chat","choices":[{"index":0,"delta":{"tool_calls":[{"index":0,"id":"call_host_1","type":"function","function":{"name":"searchLibrary","arguments":"{\"query\":\"Sealand\"}"}}]},"finish_reason":null}]}
+
+data: {"id":"chatcmpl-host-2","object":"chat.completion.chunk","created":1791700000,"model":"deepseek-chat","choices":[{"index":0,"delta":{},"finish_reason":"tool_calls"}]}
+
+data: [DONE]
+

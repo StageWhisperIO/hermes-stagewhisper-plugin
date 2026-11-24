@@ -1,0 +1,11 @@
+name: "hermes-stagewhisper-plugin CodeQL config"
+
+queries:
+  - uses: security-and-quality
+
+paths-ignore:
+  - "**/__pycache__/**"
+  - "**/.venv/**"
+  - "**/build/**"
+  - "**/dist/**"
+  - "**/*.egg-info/**"
